@@ -1,7 +1,7 @@
 // -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
 
-#ifndef __CHECKSUM_EXCEPTION_H__
-#define __NOT_FOUND_EXCEPTION_H__
+#ifndef ZXING_CHECKSUM_EXCEPTION_H
+#define ZXING_CHECKSUM_EXCEPTION_H
 
 /*
  * Copyright 20011 ZXing authors
@@ -23,12 +23,11 @@
 
 namespace zxing {
   class ChecksumException : public ReaderException {
-    typedef ReaderException Base;
   public:
-    ChecksumException() throw();
-    ChecksumException(const char *msg) throw();
-    ~ChecksumException() throw();
+    ChecksumException() noexcept;
+    ChecksumException(const char *msg) noexcept;
+    ~ChecksumException() noexcept;
   };
 }
 
-#endif // __CHECKSUM_EXCEPTION_H__
+#endif // ZXING_CHECKSUM_EXCEPTION_H
